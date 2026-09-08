@@ -1,16 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Add Skill</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Add Project | Ankit Kumar</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
-    <form method="POST" action="/projects">
-        <h2>Add Skills</h2>
-        <input placeholder="Enter Project Name"  name="projectname" style="font-size:1.5rem; "><br/> <br/>       
-          <textarea placeholder="About the Project"  name="projectinfo" style="font-size: 1.5rem; height: 7rem; width:24rem;"></textarea><br/> <br/> 
-        <button style="font-size: 1.5rem;">Submit</button>
-    </form>
+
+  <!-- Navbar -->
+  <%- include("include/navbar.ejs"); %>
+
+  <section style="padding: 40px 5%;">
+    <div class="glass-card form-container tilt-card">
+      <div style="margin-bottom: 24px; text-align: center;">
+        <span class="section-subtitle">Portfolio Manager</span>
+        <h2 style="font-size: 2rem;">Add New <span class="gradient-text-accent">Project</span></h2>
+        <p style="color: var(--text-secondary); font-size: 0.95rem;">Add a new project to your student developer showcase.</p>
+      </div>
+
+      <form action="/projects" method="POST">
+        <div class="form-group">
+          <label class="form-label" for="projectname">Project Name</label>
+          <input type="text" id="projectname" name="projectname" class="form-control" placeholder="e.g. TaskMaster - Full Stack Todo App" required />
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="category">Category</label>
+          <input type="text" id="category" name="category" class="form-control" placeholder="e.g. Full Stack, Frontend, API, DSA" />
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="projectinfo">Project Description</label>
+          <textarea id="projectinfo" name="projectinfo" class="form-control" placeholder="Describe the purpose, features, and architecture of the project..." required></textarea>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="tech">Technologies Used (Comma Separated)</label>
+          <input type="text" id="tech" name="tech" class="form-control" placeholder="e.g. Node.js, Express, MongoDB, EJS, CSS Glass" />
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="repo">GitHub Repository Link</label>
+          <input type="url" id="repo" name="repo" class="form-control" placeholder="https://github.com/Ankit099-01/your-repo" />
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="link">Live Demo Link</label>
+          <input type="url" id="link" name="link" class="form-control" placeholder="https://your-app.onrender.com" />
+        </div>
+
+        <div style="display: flex; gap: 16px; margin-top: 32px;">
+          <button type="submit" class="btn-liquid btn-liquid-primary" style="flex: 1; border-radius: var(--radius-md);">
+            <i class="fas fa-check"></i> Save & Publish Project
+          </button>
+          <a href="/projects" class="btn-liquid btn-liquid-secondary" style="border-radius: var(--radius-md);">
+            Cancel
+          </a>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <%- include("include/footer.ejs"); %>
+
 </body>
 </html>

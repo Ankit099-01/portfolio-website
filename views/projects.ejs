@@ -1,59 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/style.css">
-    <title>Ankit | project</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Featured Projects | Ankit Kumar</title>
+  <meta name="description" content="Explore full stack MERN projects and algorithm implementations created by Ankit Kumar.">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
-    <%-include("include/navbar.ejs"); %>
-     <!-- Projects -->
-    <section class="projects" id="projects">
-        <h2 class="projects-color">Projects</h2>
-        
-        <div class="project-container">
 
-        <% for(let projectt of project){ %>
+  <!-- Navbar -->
+  <%- include("include/navbar.ejs"); %>
 
-        <div class="project-card">
-            <h3 class="nameofproject , col"><%= projectt.projectname %></h3>
-            <p class="infoproject"><%= projectt.projectinfo %></p>
-            
-        </div>
-
-        <% } %>
-
+  <section class="projects-section">
+    <div class="projects-header-actions">
+      <div>
+        <span class="section-subtitle">Portfolio Showcase</span>
+        <h2 class="section-title" style="margin-bottom: 0;">Featured MERN <span class="gradient-text-accent">Projects</span></h2>
+      </div>
     </div>
 
-
-
-   
-        <!-- <div class="project-container">
-            <div class="project-card">
-                <h3 class="nameofproject" name="projectname">Portfolio Website</h3>
-                <p  class="infoproject" name="projectinfo">Personal responsive portfolio using HTML & CSS.</p>
-            </div> -->
-           
-            <!-- <div class="project-card">
-                <h3  class="nameofproject" name="projectname">Todo App</h3>
-                <p  class="infoproject" name="projectinfo">Simple task manager using JavaScript.</p>
-            </div> -->
-
-
-            <!-- <div class="project-card">
-                <h3 class="nameofproject" name="projectname">DSA Practice</h3>
-                <p  class="infoproject" name="projectinfo">Problem solving using Java.</p>
+    <div class="projects-grid">
+      <% if (project && project.length > 0) { %>
+        <% for(let p of project) { %>
+          <div class="glass-card project-card-modern tilt-card">
+            <div class="project-preview-box" style="background: <%= p.accentColor || 'linear-gradient(135deg, #6366f1, #3b82f6)' %>; display: flex; align-items: center; justify-content: center; position: relative;">
+              <div style="font-size: 3.8rem; color: #ffffff; opacity: 0.9; text-shadow: 0 10px 20px rgba(0,0,0,0.2);">
+                <i class="<%= p.iconClass || 'fas fa-laptop-code' %>"></i>
+              </div>
+              <span class="project-overlay-badge"><%= p.category || 'MERN Stack' %></span>
             </div>
-        </div> -->
-        
-        <a href="http://localhost:7061/projects/add"><button type="button" class="btn btn-success">Add New Projects</button></a>
-        
-    </section>
-    <!-- Contact -->
-    <%- include("include/contact.ejs"); %>
 
-    <!-- Footer -->
-    <%- include("include/footer.ejs"); %>
+            <div class="project-body">
+              <h3 class="project-title"><%= p.projectname %></h3>
+              <p class="project-desc"><%= p.projectinfo %></p>
+
+              <div class="project-tech-tags">
+                <% if (p.tech && Array.isArray(p.tech)) { %>
+                  <% p.tech.forEach(function(t) { %>
+                    <span class="tech-tag"><%= t %></span>
+                  <% }); %>
+                <% } else if (p.tech) { %>
+                  <span class="tech-tag"><%= p.tech %></span>
+                <% } %>
+              </div>
+            </div>
+
+            <div class="project-footer-actions">
+              <a href="<%= p.repo || 'https://github.com/Ankit099-01' %>" target="_blank" class="project-link-btn">
+                <i class="fab fa-github"></i> Code Repo
+              </a>
+              <a href="<%= p.link || '#' %>" class="project-link-btn" style="color: var(--accent-secondary);" onclick="if('<%= p.link %>' === '#' || !'<%= p.link %>') { alert('Live preview active!'); return false; }">
+                <i class="fas fa-external-link-alt"></i> Live Demo
+              </a>
+            </div>
+          </div>
+        <% } %>
+      <% } else { %>
+        <div class="glass-card" style="padding: 40px; text-align: center; grid-column: 1 / -1;">
+          <p>No projects found.</p>
+        </div>
+      <% } %>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <%- include("include/contact.ejs"); %>
+
+  <!-- Footer -->
+  <%- include("include/footer.ejs"); %>
+
 </body>
 </html>

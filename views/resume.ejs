@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ankit Kumar - Official Resume | Full Stack Developer</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap');
+    
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #f8fafc;
+      color: #0f172a;
+      padding: 40px 20px;
+      line-height: 1.5;
+    }
+
+    .resume-actions-bar {
+      max-width: 820px;
+      margin: 0 auto 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .btn-download {
+      background: #4f46e5;
+      color: #ffffff;
+      padding: 10px 20px;
+      border-radius: 30px;
+      font-weight: 600;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      border: none;
+      cursor: pointer;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      box-shadow: 0 4px 14px rgba(79, 70, 229, 0.3);
+      transition: all 0.2s;
+    }
+
+    .btn-download:hover {
+      background: #4338ca;
+      transform: translateY(-2px);
+    }
+
+    .resume-page {
+      max-width: 820px;
+      margin: 0 auto;
+      background: #ffffff;
+      padding: 48px 56px;
+      border-radius: 12px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+      border: 1px solid #e2e8f0;
+    }
+
+    .header {
+      text-align: center;
+      border-bottom: 2px solid #0f172a;
+      padding-bottom: 16px;
+      margin-bottom: 20px;
+    }
+
+    .name {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 2.2rem;
+      font-weight: 800;
+      color: #0f172a;
+      letter-spacing: -0.02em;
+    }
+
+    .contact-info {
+      font-size: 0.9rem;
+      color: #334155;
+      margin-top: 6px;
+    }
+
+    .contact-info a {
+      color: #334155;
+      text-decoration: underline;
+    }
+
+    .section-title {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 1.05rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      border-bottom: 1px solid #cbd5e1;
+      padding-bottom: 4px;
+      margin: 20px 0 10px;
+      color: #0f172a;
+    }
+
+    p, li {
+      font-size: 0.9rem;
+      color: #334155;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    li {
+      margin-bottom: 4px;
+    }
+
+    .item-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      font-weight: 700;
+      font-size: 0.95rem;
+      color: #0f172a;
+    }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 6px;
+    }
+
+    @media print {
+      body { background: #ffffff; padding: 0; }
+      .resume-actions-bar { display: none; }
+      .resume-page { box-shadow: none; border: none; padding: 0; max-width: 100%; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="resume-actions-bar">
+    <a href="/" style="color: #475569; text-decoration: none; font-weight: 600;">
+      <i class="fas fa-arrow-left"></i> Back to Portfolio
+    </a>
+    <div style="display: flex; gap: 10px;">
+      <a href="/images/ankitt_resume.pdf" download="Ankit_Kumar_Resume.pdf" target="_blank" class="btn-download">
+        <i class="fas fa-file-arrow-down"></i> Download Original PDF Resume
+      </a>
+      <button onclick="window.print()" class="btn-download" style="background: #06b6d4;">
+        <i class="fas fa-print"></i> Print
+      </button>
+    </div>
+  </div>
+
+  <div class="resume-page">
+    <!-- Header -->
+    <div class="header">
+      <h1 class="name">Ankit Kumar</h1>
+      <div class="contact-info">
+        <strong>Email:</strong> Ankitkumar.pu27@gmail.com | <strong>Phone:</strong> (+91) 7061808258 <br>
+        <strong>GitHub:</strong> <a href="https://github.com/Ankit099-01" target="_blank">github.com/Ankit099-01</a> | 
+        <strong>LinkedIn:</strong> <a href="https://linkedin.com/in/ankit-kumar" target="_blank">linkedin.com/in/ankit-kumar</a>
+      </div>
+    </div>
+
+    <!-- Professional Summary -->
+    <div class="section-title">PROFESSIONAL SUMMARY</div>
+    <p>
+      Computer Science Engineering student with practical experience in full-stack web development using the MERN stack. Proficient in building web applications, RESTful APIs, and backend systems. Strong foundation in Data Structures and Algorithms, DBMS, Operating Systems, and Computer Networks, with an interest in software development and AI applications.
+    </p>
+
+    <!-- Education -->
+    <div class="section-title">EDUCATION</div>
+    <div class="item-header">
+      <span>B.Tech in Computer Science Engineering | Parul University</span>
+      <span>[2023–2027]</span>
+    </div>
+    <p><strong>Coursework:</strong> Data Structures and Algorithms, Operating Systems, Computer Networks, Object-Oriented Programming, DBMS</p>
+
+    <!-- Projects -->
+    <div class="section-title">PROJECTS</div>
+    
+    <div style="margin-bottom: 12px;">
+      <div class="item-header">Government Services Platform (GOV DESK)</div>
+      <ul>
+        <li>Built a government services platform using the MERN stack (MongoDB, Express.js, React.js, Node.js).</li>
+        <li>Integrated the Google Maps API for location-based government office search and navigation.</li>
+        <li>Added service categorization and an accessible UI to improve navigation and usability.</li>
+        <li>Designed REST APIs for efficient data retrieval and service information management.</li>
+      </ul>
+    </div>
+
+    <div style="margin-bottom: 12px;">
+      <div class="item-header">AI-Hiring Platform</div>
+      <ul>
+        <li>Developed a hiring platform using React.js, Node.js, Express.js, and MongoDB with integrated AI capabilities.</li>
+        <li>Integrated the OpenAI API for automated interview analysis and candidate skill evaluation.</li>
+        <li>Implemented live video interview functionality using WebRTC and Socket.io.</li>
+        <li>Created a recruiter dashboard for candidate ranking, assessment tracking, and interview management.</li>
+        <li>Designed secure backend APIs and database models for user authentication and data handling.</li>
+      </ul>
+    </div>
+
+    <!-- Skills -->
+    <div class="section-title">SKILLS</div>
+    <div class="skills-grid">
+      <p>• <strong>Languages:</strong> Java, JavaScript, Python, C</p>
+      <p>• <strong>Frontend:</strong> React.js, HTML5, CSS3, Bootstrap</p>
+      <p>• <strong>Backend:</strong> Node.js, Express.js, RESTful APIs</p>
+      <p>• <strong>Database:</strong> MongoDB, MYSQL</p>
+      <p>• <strong>Tools:</strong> Git, GitHub, VS Code, IntelliJ IDEA</p>
+      <p>• <strong>Core CS:</strong> Data Structures & Algorithms, DBMS, Operating Systems, Computer Networks</p>
+    </div>
+
+    <!-- Achievements -->
+    <div class="section-title">ACHIEVEMENTS</div>
+    <ul>
+      <li>Solved 70+ DSA problems on LeetCode.</li>
+      <li>Built multiple MERN stack projects.</li>
+    </ul>
+
+    <!-- Certifications -->
+    <div class="section-title">CERTIFICATIONS</div>
+    <div style="margin-bottom: 6px;">
+      <div class="item-header">Artificial Intelligence Fundamentals — IBM SkillsBuild and Cisco Networking Academy</div>
+      <ul>
+        <li>Learned core AI concepts including machine learning fundamentals, neural networks, and real-world AI applications</li>
+        <li>Studied ethical considerations in AI systems and responsible data usage</li>
+      </ul>
+    </div>
+
+    <div style="margin-bottom: 6px;">
+      <div class="item-header">AWS Academy Cloud Foundations — AWS</div>
+      <ul>
+        <li>Built foundational knowledge of cloud computing, AWS core services, and deployment models</li>
+        <li>Developed understanding of cloud architecture, security basics, and virtualization</li>
+      </ul>
+    </div>
+
+    <div>
+      <div class="item-header">Design and Analysis of Algorithms — CodeTantra</div>
+      <ul>
+        <li>Covered algorithm design techniques and time and space complexity analysis (Big-O notation)</li>
+        <li>Strengthened structured problem-solving and optimization thinking</li>
+      </ul>
+    </div>
+  </div>
+
+</body>
+</html>
