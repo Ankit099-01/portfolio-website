@@ -10,12 +10,12 @@ app.set("view engine", "ejs");
 // MERN Stack Projects from Resume with Enhanced Project Badges & Metadata
 let project = [
   {
-    projectname: "Government Services Platform (GOV DESK)",
+    projectname: "Government Services Platform (GovDesk)",
     projectinfo: "Full-stack government services portal using the MERN stack (MongoDB, Express.js, React.js, Node.js). Integrated Google Maps API for location-based office search, service categorization, and RESTful APIs for efficient data management.",
     category: "MERN Stack",
     tech: ["React.js", "Node.js", "Express.js", "MongoDB", "Google Maps API", "REST APIs"],
-    repo: "https://github.com/Ankit099-01",
-    link: "#",
+    repo: "https://github.com/Ankit099-01/GovDesk",
+    link: "https://govdesk-navy.vercel.app/",
     image: "/images/p-image1.jpeg",
     iconClass: "fas fa-landmark",
     accentColor: "linear-gradient(135deg, #6366f1, #3b82f6)"
@@ -37,7 +37,7 @@ let project = [
     category: "MERN Stack",
     tech: ["Node.js", "Express.js", "MongoDB", "EJS", "CSS Glassmorphism", "HTML5 Canvas"],
     repo: "https://github.com/Ankit099-01/Portfolio-website",
-    link: "http://localhost:7061",
+    link: "https://ankitkumar-portfolio099.vercel.app/",
     image: "/images/profile_photo.jpeg",
     iconClass: "fas fa-layer-group",
     accentColor: "linear-gradient(135deg, #ec4899, #8b5cf6)"
